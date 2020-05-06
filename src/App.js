@@ -16,9 +16,7 @@ export default function App() {
 
   useEffect(()=>{
     api.get('repositories').then(response=>{
-
       const {data: repositoriesList} = response;
-      console.log(repositoriesList)
       setRepositories(repositoriesList)
     })
   }, [])
